@@ -55,7 +55,7 @@
           <div class="h-14 w-14 rounded-full bg-gradient-to-tr from-purple-500 via-pink-500 to-yellow-400 flex items-center justify-center shadow-lg">
             <img src="images/logo.png" alt="Kami Flex Logo" class="h-10 w-10 rounded-full">
           </div>
-          <h1 class="text-3xl sm:text-4xl font-extrabold animated-text">Kami Flex</h1>
+          <h1 class="text-3xl sm:text-4xl font-extrabold animated-text">Ali Sindhi</h1>
         </div>
         <button onclick="toggleMenu()" class="hamburger-btn p-2 rounded-lg bg-white/70 shadow absolute right-6 top-5">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -83,7 +83,7 @@
 
     <!-- MAIN CONTENT -->
     <main id="mainContent" class="flex-grow flex flex-col items-center justify-center text-center px-6 py-16">
-      <h1 class="text-4xl font-extrabold text-gray-900 mb-4">🎉 Welcome to Kami Flex!</h1>
+      <h1 class="text-4xl font-extrabold text-gray-900 mb-4">🎉 Welcome to Ali Sindhi</h1>
       <p class="text-lg text-gray-700 max-w-xl mb-8">
         You have successfully logged in with your access key.
       </p>
@@ -110,7 +110,7 @@
 
     <!-- FOOTER -->
     <footer class="py-6 text-sm opacity-90 text-gray-800 text-center">
-      <div class="font-bold">Kami Flex</div>
+      <div class="font-bold">Ali Sindhi</div>
       <div>© 2025 All rights reserved</div>
     </footer>
   </div>
@@ -121,7 +121,7 @@
 
     // ✅ Check if already logged in
     window.onload = function(){
-      if(localStorage.getItem("kamiFlexLogin") === "true"){
+      if(localStorage.getItem("AliSindhiLogin") === "true"){
         document.getElementById("loginScreen").style.display = "none";
         document.getElementById("homePage").classList.remove("hidden");
       }
@@ -142,7 +142,7 @@
         setTimeout(() => {
           document.getElementById("loginScreen").style.display = "none";
           document.getElementById("homePage").classList.remove("hidden");
-          localStorage.setItem("kamiFlexLogin", "true"); // 🔥 Save login
+          localStorage.setItem("AliSindhiLogin", "true"); // 🔥 Save login
         }, 2000);
       } else {
         errorMsg.classList.remove("hidden");
@@ -156,11 +156,11 @@
 
     // 🚪 Logout
     function logout(){
-      localStorage.removeItem("kamiFlexLogin"); // ❌ Clear login
+      localStorage.removeItem("AliSindhiLogin"); // ❌ Clear login
       document.getElementById("homePage").classList.add("hidden");
       document.getElementById("loginScreen").style.display = "flex";
       document.getElementById("accessKey").value = "";
-      document.getElementById("loginBtn").disabled = false;
+      document.getElementById("loginBtn").disabled = true;
       document.getElementById("loading").classList.add("hidden");
       toggleMenu();
     }
