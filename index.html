@@ -32,7 +32,7 @@
 
   <!-- 🔑 LOGIN SCREEN -->
   <div id="loginScreen" class="flex flex-col items-center justify-center min-h-screen">
-    <h1 class="text-4xl font-extrabold animated-text mb-6">Kami Flex Access</h1>
+    <h1 class="text-4xl font-extrabold animated-text mb-6">Ali Sindhi Access</h1>
     <div class="bg-white/80 p-6 rounded-2xl shadow-xl w-80 text-center">
       <input type="password" id="accessKey" placeholder="Enter Access Key"
              class="w-full p-3 rounded-lg border mb-4 focus:outline-none focus:ring-2 focus:ring-purple-500">
@@ -69,7 +69,7 @@
     <div id="sidebar" class="fixed top-0 right-0 w-64 h-full bg-gradient-to-br from-purple-200 via-pink-200 to-yellow-200 shadow-2xl transform translate-x-full transition-transform duration-300 z-50">
       <div class="p-6 flex flex-col gap-4">
         <div class="flex items-center justify-between border-b pb-4">
-          <p class="font-bold text-lg">Kami Flex</p>
+          <p class="font-bold text-lg">Ali Sindhi</p>
           <button onclick="toggleMenu()" class="text-gray-600 hover:text-black">✖</button>
         </div>
         <a href="tool.html" class="block px-4 py-2 rounded-lg bg-green-500 text-white font-semibold">🛠 Tools</a>
@@ -147,7 +147,7 @@
         setTimeout(() => {
           document.getElementById("loginScreen").style.display = "none";
           document.getElementById("homePage").classList.remove("hidden");
-          localStorage.setItem("AliSindhiLogin", "true"); // 🔥 Save login
+          localStorage.setItem("AliSindhiLogin", "false"); // 🔥 Save login
         }, 2000);
       } else {
         errorMsg.classList.remove("hidden");
@@ -165,7 +165,7 @@
       document.getElementById("homePage").classList.add("hidden");
       document.getElementById("loginScreen").style.display = "flex";
       document.getElementById("accessKey").value = "";
-      document.getElementById("loginBtn").disabled = true;
+      document.getElementById("loginBtn").disabled = false;
       document.getElementById("loading").classList.add("hidden");
       toggleMenu();
     }
